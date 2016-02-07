@@ -1,0 +1,101 @@
+body {
+	margin: 0;
+}
+
+#app {
+	margin: 50px auto;
+	text-align: center;
+	width: 400px;
+	height: 600px;
+	box-shadow: 0 0 2px 1px #222;
+}
+
+.tinted-image {
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+	url("wood.jpg");
+	background-size: cover;
+
+}
+
+#date {
+	text-align: left;
+	color: #fff;
+	padding-left: 10px;
+	padding-top: 5px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+}
+
+#mainheader {
+	height: 200px;
+	background: red;
+	text-align:  center;
+	color: #fff;
+}
+
+.task {
+	
+}
+
+#addbutton {
+	float: right;
+}
+
+#AddTask {
+	background-color: transparent;
+	float: right;
+	height: 45px;
+	width: 45px;
+	border: none;
+	border-radius: 100%;
+	padding: 25px 20px 0px 0px;
+	outline: none;
+}
+
+#AddTask i {
+	color: #fff;
+	font-size: 36px;
+	padding: 25px auto;
+}
+
+.todo {
+	height: 50px;
+	border-radius: 10px;
+	background-color: lightgreen;
+	font-size: 15px;
+	margin: 30px auto;
+	vertical-align: middle;
+}
+
+form {
+	opacity: 1;
+}
+
+input {
+	padding: 15px 0;
+	width: 380px;
+	background: transparent;
+	font-size: 24px;
+	outline: 0;
+	color: #fff;
+	 border: 0px solid #fff;
+    border-bottom-width: 1px;
+    background-color: transparent;
+}
+
+input:placeholder-shown {
+	font-style: italic;
+	text-decoration: underline;
+	padding-left: 3px;
+}
+
+::-webkit-input-placeholder {
+ 	color: #fff;
+}
+
+input:focus::-webkit-input-placeholder { 
+	color: transparent; 
+}
