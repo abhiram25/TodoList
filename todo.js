@@ -18,6 +18,9 @@ var task = document.querySelector("#add").value;
 
 addTask.addEventListener("click", function() {
 
+	EnterTask.style.opacity = 1;
+	EnterTask.style.transition = "opacity 1s";
+
 
 	var task = document.querySelector("#add").value;
 
