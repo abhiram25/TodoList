@@ -3,7 +3,7 @@ var addTask = document.querySelector("#date #AddTask");
 
 var todos = [];
 
-var EnterTask = document.querySelector("#EnterTask");
+var add = document.querySelector("#add");
 
 var tasks = document.querySelector("#tasks");
 	
@@ -14,74 +14,139 @@ var add = document.querySelector("#add");
 var close = document.querySelector("#close");
 
 
-var task = document.querySelector("#add").value;
+
+
+
+
 
 addTask.addEventListener("click", function() {
 
-	EnterTask.style.opacity = 1;
-	EnterTask.style.transition = "opacity 1s";
+	add.style.opacity = 1;
+	add.style.transition = "opacity 1s";
 
 
-	var task = document.querySelector("#add").value;
+
+
+
+
+
+
+	});
 
 	add.addEventListener("keypress", function(event) {
+		
 		var task = document.querySelector("#add").value;
-		if(event.which == 13) {
-			console.log(task);
-		}
-	});
 
 
+	 if (event.keyCode == 13) {
 
 
-
-	});
-
-
-	
+	 	
+	 	todos.push(task);
+	 	var a = document.createElement("div");
 
 
+		var check = document.createElement("div");
 
+		a.className += "todo fade-in";
 
-/*
-	var input = document.querySelector("input").value;
+		check.className += "check";
 
+		a.appendChild(check);
 
-					
-					todos.push(input);
-
+		
+		
 
 		var p = document.createElement("p");
-		var remove = document.createElement("button");
-
-	var node = document.createTextNode(input);
+		
+		var node = document.createTextNode(task);
 
 		p.appendChild(node);
-		p.appendChild(remove);
+
+		var span = document.createElement("span");
+
+		span.className += "fa fa-trash delete";
+
+		span.style.opacity = 0;
+
+		p.appendChild(span);
+
+		a.appendChild(p);
+
+
+		tasks.appendChild(a);
+
+		var task = document.querySelector("#add").value = " ";
+
+		add.style.opacity = 0;
+		add.style.transition = "opacity none";
+
+	check.addEventListener("click", function() {
+		if (check.style.backgroundColor === "transparent") {
+			check.style.backgroundColor = "#fff";
+			p.style.textDecoration = "line-through";
+		} else {
+			check.style.backgroundColor = "transparent";
+			p.style.textDecoration = "none";
+		}
+	});	
+
+
+	p.addEventListener("click", function() {
+		if (check.style.backgroundColor === "transparent") {
+			check.style.backgroundColor = "#fff";
+			p.style.textDecoration = "line-through";
+		} else {
+			check.style.backgroundColor = "transparent";
+			p.style.textDecoration = "none";
+		}
+	});	
+
+		span.addEventListener("click", function() {
+			a.style.opacity = 0;
+			a.style.transition = "opacity .5s";
+			tasks.removeChild(a);
+		});
+
+	a.addEventListener("mouseover", function() {
+		span.style.opacity = 1;
+		span.style.transition = "opacity .5s";
+	});
+
+	a.addEventListener("mouseout", function() {
+		span.style.opacity = 0;
+		span.style.transition = "opacity .5s";
+	});
+
+
+
+		
+}
+
+
+
+
+
+
+
+
+
+
+	});
+
+
+
+
+
+
 
 		
 
-			tasks.appendChild(p);
-
-			remove.addEventListener("click", function() {
-			tasks.removeChild(p);
-		});
-
-			p.addEventListener("click", function() {
-				if (p.style.textDecoration === "none") {
-					p.style.setProperty("text-decoration", "line-through");
-				} else {
-					p.style.setProperty("text-decoration", "none");
-				}
-});  		
-			
-		}); 
-*/
 
 
-/* close.addEventListener("click", function() {
-		EnterTask.style.display = "none";
-	}); */
+
+
+
 
 
 

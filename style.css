@@ -4,10 +4,16 @@ body {
 
 #app {
 	margin: 50px auto;
-	text-align: center;
 	width: 400px;
-	height: 600px;
+	min-height: 600px;
 	box-shadow: 0 0 2px 1px #222;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
 }
 
 .tinted-image {
@@ -17,8 +23,20 @@ body {
     ),
 	url("wood.jpg");
 	background-size: cover;
-
 }
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn .5s ease-in 1 forwards;
+}
+
 
 #date {
 	text-align: left;
@@ -39,6 +57,7 @@ body {
 .task {
 	
 }
+
 
 #addbutton {
 	float: right;
@@ -61,23 +80,18 @@ body {
 	padding: 25px auto;
 }
 
+
 .todo {
-	height: 50px;
-	border-radius: 10px;
-	background-color: lightgreen;
 	font-size: 15px;
-	margin: 30px auto;
-	vertical-align: middle;
+	margin-top: 35px;
 }
 
-form {
+#add{
 	opacity: 0;
-}
-
-input {
 	padding: 15px 0;
 	width: 380px;
 	background: transparent;
+	margin-left: 10px;
 	font-size: 24px;
 	outline: 0;
 	color: #fff;
@@ -85,6 +99,8 @@ input {
     border-bottom-width: 1px;
     background-color: transparent;
 }
+
+
 
 input:placeholder-shown {
 	font-style: italic;
@@ -94,8 +110,55 @@ input:placeholder-shown {
 
 ::-webkit-input-placeholder {
  	color: #fff;
+ 	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
 }
 
 input:focus::-webkit-input-placeholder { 
 	color: transparent; 
 }
+
+input[type= "checkbox"] {
+
+}
+
+.check {
+	margin-left: 20px;
+	width: 25px;
+	height: 25px;
+	background-color: transparent;
+	border: 3px solid #fff;
+	border-radius: 90%;
+	outline: none;
+	float: left;
+}
+
+.delete {
+	font-size: 24px;
+	color: #fff;
+	margin-left: 85px;
+	display: block;
+}
+
+
+#tasks {
+	padding-top: 25px;
+}
+
+
+.todo {
+	width: 400px;
+	margin-bottom: 0;
+	display: block;
+}
+
+.todo p {
+	font-size: 24px;
+	color: #fff;
+	padding-left: 130px;
+}
+
+
+
+
+
