@@ -118,6 +118,12 @@ input:focus::-webkit-input-placeholder {
 	color: transparent; 
 }
 
+
+input[value] {
+ font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
 input[type= "checkbox"] {
 
 }
