@@ -48,11 +48,15 @@ addTask.addEventListener("click", function() {
 
 		var check = document.createElement("div");
 
-		a.className += "todo fade-in";
+		a.className += "todo";
 
 		check.className += "check";
 
+		
 		a.appendChild(check);
+		
+
+		
 
 		
 		
@@ -73,8 +77,24 @@ addTask.addEventListener("click", function() {
 
 		a.appendChild(p);
 
+		//a.style.opacity = 1;
+		//a.style.transition = "opacity .5s";
 
+		a.style.opacity = 0;
 		tasks.appendChild(a);
+
+		window.setTimeout(addTask, 0);
+
+		function addTask() {
+
+			
+
+			a.style.opacity = 1;
+			
+		}
+	
+
+
 
 		var task = document.querySelector("#add").value = " ";
 
@@ -103,14 +123,22 @@ addTask.addEventListener("click", function() {
 	});	
 
 		span.addEventListener("click", function() {
+			console.log(this);
+			console.log(a);
 			a.style.opacity = 0;
 			a.style.transition = "opacity .5s";
-			tasks.removeChild(a);
+
+			window.setTimeout(remove, 500);
+
+			function remove() {
+				tasks.removeChild(a);
+			}
 		});
 
 	a.addEventListener("mouseover", function() {
 		span.style.opacity = 1;
 		span.style.transition = "opacity .5s";
+
 	});
 
 	a.addEventListener("mouseout", function() {

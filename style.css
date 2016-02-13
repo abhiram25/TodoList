@@ -26,8 +26,7 @@ h1 {
 }
 
 
-@keyframes fadeIn {
-  to {
+/*  to {
     opacity: 1;
   }
 }
@@ -36,6 +35,18 @@ h1 {
   opacity: 0;
   animation: fadeIn .5s ease-in 1 forwards;
 }
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+} 
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 1.5s ease-out 0 ;
+}*/
+
 
 
 #date {
@@ -84,6 +95,8 @@ h1 {
 .todo {
 	font-size: 15px;
 	margin-top: 35px;
+	opacity: 1;
+	transition: opacity .5s;
 }
 
 #add{
