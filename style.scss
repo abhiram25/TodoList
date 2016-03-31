@@ -1,0 +1,168 @@
+$zero: 0;
+$ten: 10px;
+$height: 200px;
+$width: 400px;
+$Roboto: 'Roboto', sans-serif;
+$hundred: 100;
+$source: 'Source Sans Pro', sans-serif;
+$left: left;
+$white: #fff;
+$right: right;
+$none: none;
+$font-size: 24px;
+$transparent: transparent;
+
+
+@mixin margin($margin) {
+	margin: $margin;
+}
+
+@mixin dimension($height, $width) {
+	height: $height;
+	width: $width;
+}
+
+@mixin font($family, $weight) {
+	font-family: $family;
+	font-weight: $weight;
+}
+
+@mixin padding($padding) {
+	padding: $padding;
+}
+
+@mixin white {
+	color: $white;
+}
+
+@mixin border($border) {
+	border: $border;
+	outline: none;
+}
+
+body {
+	margin: $zero;
+}
+
+#app {
+	@include margin(50px auto);
+	min-height: $height + 400;
+	@include dimension(null, $width);
+	box-shadow: 0 0 2px 1px #222;
+	@include font($Roboto, $hundred);
+}
+
+h1 {
+@include font($Roboto, $hundred);
+}
+
+.tinted-image {
+   background: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+	url("wood.jpg");
+	background-size: cover;
+}
+
+#date {
+	@include font($source, $hundred +100);
+	@include padding(5px 0 0 $ten);
+	text-align: $left;
+	@include white;
+}
+
+#mainheader {
+	height: $height;
+	text-align: center;
+	@include white;
+}
+
+#addbutton {
+	float: $right;
+}
+
+#AddTask {
+	float: $right;
+	@include dimension($height - 155, $width - 355);
+	@include padding(25px 20px 0px 0px);
+	@include border($none);
+	background-color: $transparent;
+	border-radius: 100%;
+
+	i {
+	@include white;
+	font-size: $font-size + 12;
+	@include padding(25px auto);
+	}
+}
+
+.todo {
+	font-size: $font-size - 9;
+	opacity: $zero + 1;
+	transition: opacity .5s;
+	@include margin(35px 0 0 0);
+	@include dimension(null, 400px);
+	display: block;
+
+	p {
+		font-size: $font-size;
+		@include white;
+		@include padding(0 0 0 130px);
+
+	}
+}
+
+#add {
+	opacity: $zero;
+	@include padding(15px 0);
+	@include dimension(null, 380px);
+	background: $transparent;
+	@include margin(0 0 0 10px);
+	@include border(0px solid #fff);
+	border-bottom-width: $zero + 1 + px;
+	font-size: $font-size;
+;}
+
+input {
+	&:placeholder-shown {
+		font-style: italic;
+		text-decoration: none;
+		@include padding(0 0 0 3px);
+	}
+
+	&:focus::-webkit-input-placeholder {
+	 	@include white;
+	}
+}
+
+::-webkit-input-placeholder {
+	@include white;
+	@include font($Roboto, $hundred);
+}
+
+input[value] {
+	@include white;
+	@include font($Roboto, $hundred);
+}
+
+.check {
+	@include margin(0 0 0 20px);
+	@include dimension(25px, 25px);
+	background-color: $transparent;
+	border-radius: 90%;
+	@include border(3px solid #fff);
+	float: $left;
+}
+
+.delete {
+	font-size: $font-size;
+	@include white;
+	@include margin(0 0 0 85px);
+	display: block;
+}
+
+#tasks  {
+	@include padding(0 0 0 25px);
+}
+

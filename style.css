@@ -1,183 +1,108 @@
 body {
-	margin: 0;
-}
+  margin: 0; }
 
 #app {
-	margin: 50px auto;
-	width: 400px;
-	min-height: 600px;
-	box-shadow: 0 0 2px 1px #222;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
-}
+  margin: 50px auto;
+  min-height: 600px;
+  width: 400px;
+  box-shadow: 0 0 2px 1px #222;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100; }
 
 h1 {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
-}
+  font-family: "Roboto", sans-serif;
+  font-weight: 100; }
 
 .tinted-image {
-	background: linear-gradient(
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.5)
-    ),
-	url("wood.jpg");
-	background-size: cover;
-}
-
-
-/*  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn .5s ease-in 1 forwards;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-  }
-} 
-
-.fade-out {
-  opacity: 1;
-  animation: fadeOut 1.5s ease-out 0 ;
-}*/
-
-
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("wood.jpg");
+  background-size: cover; }
 
 #date {
-	text-align: left;
-	color: #fff;
-	padding-left: 10px;
-	padding-top: 5px;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-}
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
+  padding: 5px 0 0 10px;
+  text-align: left;
+  color: #fff; }
 
 #mainheader {
-	height: 200px;
-	background: red;
-	text-align:  center;
-	color: #fff;
-}
-
-.task {
-	
-}
-
+  height: 200px;
+  text-align: center;
+  color: #fff; }
 
 #addbutton {
-	float: right;
-}
+  float: right; }
 
 #AddTask {
-	background-color: transparent;
-	float: right;
-	height: 45px;
-	width: 45px;
-	border: none;
-	border-radius: 100%;
-	padding: 25px 20px 0px 0px;
-	outline: none;
-}
-
-#AddTask i {
-	color: #fff;
-	font-size: 36px;
-	padding: 25px auto;
-}
-
+  float: right;
+  height: 45px;
+  width: 45px;
+  padding: 25px 20px 0px 0px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 100%; }
+  #AddTask i {
+    color: #fff;
+    font-size: 36px;
+    padding: 25px auto; }
 
 .todo {
-	font-size: 15px;
-	margin-top: 35px;
-	opacity: 1;
-	transition: opacity .5s;
-}
+  font-size: 15px;
+  opacity: 1;
+  transition: opacity .5s;
+  margin: 35px 0 0 0;
+  width: 400px;
+  display: block; }
+  .todo p {
+    font-size: 24px;
+    color: #fff;
+    padding: 0 0 0 130px; }
 
-#add{
-	opacity: 0;
-	padding: 15px 0;
-	width: 380px;
-	background: transparent;
-	margin-left: 10px;
-	font-size: 24px;
-	outline: 0;
-	color: #fff;
-	 border: 0px solid #fff;
-    border-bottom-width: 1px;
-    background-color: transparent;
-}
-
-
+#add {
+  opacity: 0;
+  padding: 15px 0;
+  width: 380px;
+  background: transparent;
+  margin: 0 0 0 10px;
+  border: 0px solid #fff;
+  outline: none;
+  border-bottom-width: 1px;
+  font-size: 24px; }
 
 input:placeholder-shown {
-	font-style: italic;
-	text-decoration: underline;
-	padding-left: 3px;
-}
+  font-style: italic;
+  text-decoration: none;
+  padding: 0 0 0 3px; }
+input:focus::-webkit-input-placeholder {
+  color: #fff; }
 
 ::-webkit-input-placeholder {
- 	color: #fff;
- 	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
-}
-
-input:focus::-webkit-input-placeholder { 
-	color: transparent; 
-}
-
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100; }
 
 input[value] {
- font-family: 'Roboto', sans-serif;
-	font-weight: 100;
-}
-
-input[type= "checkbox"] {
-
-}
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100; }
 
 .check {
-	margin-left: 20px;
-	width: 25px;
-	height: 25px;
-	background-color: transparent;
-	border: 3px solid #fff;
-	border-radius: 90%;
-	outline: none;
-	float: left;
-}
+  margin: 0 0 0 20px;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border-radius: 90%;
+  border: 3px solid #fff;
+  outline: none;
+  float: left; }
 
 .delete {
-	font-size: 24px;
-	color: #fff;
-	margin-left: 85px;
-	display: block;
-}
-
+  font-size: 24px;
+  color: #fff;
+  margin: 0 0 0 85px;
+  display: block; }
 
 #tasks {
-	padding-top: 25px;
-}
+  padding: 0 0 0 25px; }
 
-
-.todo {
-	width: 400px;
-	margin-bottom: 0;
-	display: block;
-}
-
-.todo p {
-	font-size: 24px;
-	color: #fff;
-	padding-left: 130px;
-}
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */
